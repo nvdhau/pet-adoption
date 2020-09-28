@@ -18,3 +18,6 @@ class Pet(models.Model):
 class Vaccine(models.Model):
   name = models.CharField(max_length=50)
 
+  # override str method, to display name instead of object
+  def __str__(self):
+    return self.name
